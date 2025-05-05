@@ -1,30 +1,29 @@
 {
   "manifest_version": 3,
-  "name": "SynqAI",
+  "name": "SynqAi",
   "version": "0.1.0",
-  "description": "A privacy-first operating system for AI helpers",
-  "permissions": ["storage", "tabs", "webNavigation", "scripting"],
-  "host_permissions": ["http://localhost:42715/*"],
+  "description": "A privacy-first personal memory extension that creates a secure, user-owned memory bank",
+  "permissions": [
+    "storage",
+    "tabs",
+    "webNavigation",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:42715/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
-  },
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  }
+  ]
 }

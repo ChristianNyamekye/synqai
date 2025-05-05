@@ -1,0 +1,20 @@
+{
+  "name": "@synqai/extension",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc && cp src/*.js . && cp src/*.js.map .",
+    "dev": "tsc -w",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@synqai/shared": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.260",
+    "@types/jest": "^29.5.12",
+    "typescript": "^5.3.3",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  }
+} 

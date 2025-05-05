@@ -10,7 +10,7 @@ app.use(express.json());
 const validatePermissions = async (
   req: express.Request,
   res: express.Response,
-  next: express.Function
+  next: express.NextFunction
 ) => {
   const agentId = req.headers["x-agent-id"] as string;
   const scope = req.query.scope as string;

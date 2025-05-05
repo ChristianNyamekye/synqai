@@ -35,6 +35,16 @@
     },
     "linux": {
       "target": "AppImage"
-    }
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "dist/preload.js",
+        "to": "preload.js"
+      }
+    ]
   }
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield Background -->
+  <path d="M64 8L16 24V64C16 88 32 108 64 120C96 108 112 88 112 64V24L64 8Z" 
+        fill="#1A73E8" />
+  
+  <!-- Memory Chip Symbol -->
+  <g transform="translate(32, 32)">
+    <!-- Chip Base -->
+    <rect x="0" y="0" width="64" height="64" rx="4" fill="#FFFFFF" />
+    
+    <!-- Memory Lines -->
+    <rect x="8" y="8" width="48" height="4" fill="#1A73E8" />
+    <rect x="8" y="20" width="48" height="4" fill="#1A73E8" />
+    <rect x="8" y="32" width="48" height="4" fill="#1A73E8" />
+    <rect x="8" y="44" width="48" height="4" fill="#1A73E8" />
+    
+    <!-- Connection Points -->
+    <circle cx="8" cy="10" r="2" fill="#1A73E8" />
+    <circle cx="56" cy="10" r="2" fill="#1A73E8" />
+    <circle cx="8" cy="22" r="2" fill="#1A73E8" />
+    <circle cx="56" cy="22" r="2" fill="#1A73E8" />
+    <circle cx="8" cy="34" r="2" fill="#1A73E8" />
+    <circle cx="56" cy="34" r="2" fill="#1A73E8" />
+    <circle cx="8" cy="46" r="2" fill="#1A73E8" />
+    <circle cx="56" cy="46" r="2" fill="#1A73E8" />
+  </g>
+</svg> 
