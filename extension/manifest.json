@@ -3,25 +3,37 @@
   "name": "SynqAI",
   "version": "0.1.0",
   "description": "A privacy-first operating system for AI helpers",
-  "permissions": ["storage", "tabs", "webNavigation", "scripting"],
-  "host_permissions": ["http://localhost:42715/*"],
+  "permissions": ["storage", "tabs", "webNavigation", "scripting", "activeTab"],
+  "host_permissions": [
+    "http://localhost:42715/*",
+    "*://*.google.com/calendar/*",
+    "*://*.booking.com/*",
+    "*://*.expedia.com/*",
+    "*://*.kayak.com/*"
+  ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "dist/background.js"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "matches": [
+        "*://*.google.com/calendar/*",
+        "*://*.booking.com/*",
+        "*://*.expedia.com/*",
+        "*://*.kayak.com/*"
+      ],
+      "js": ["dist/extractor.js"]
     }
   ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     }
   },
+  "options_page": "src/options.html",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",

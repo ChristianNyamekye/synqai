@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SynqAI Options</title>
+    <style>
+      body {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 32px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+      .header img {
+        width: 48px;
+        height: 48px;
+      }
+      .section {
+        background: #f5f5f5;
+        padding: 24px;
+        border-radius: 8px;
+      }
+      .section h2 {
+        margin-top: 0;
+      }
+      .form-group {
+        margin-bottom: 16px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+      input[type="text"],
+      input[type="url"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      button {
+        background: #1a73e8;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      button:hover {
+        background: #1557b0;
+      }
+      .status {
+        margin-top: 8px;
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      .status.success {
+        background: #e6f4ea;
+        color: #137333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="../icons/icon48.png" alt="SynqAI Logo" />
+        <h1>SynqAI Settings</h1>
+      </div>
+
+      <div class="section">
+        <h2>API Configuration</h2>
+        <div class="form-group">
+          <label for="api-url">API Endpoint URL</label>
+          <input
+            type="url"
+            id="api-url"
+            placeholder="https://api.example.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="api-key">API Key</label>
+          <input type="text" id="api-key" placeholder="Enter your API key" />
+        </div>
+        <button id="save-api">Save API Settings</button>
+        <div id="api-status" class="status" style="display: none"></div>
+      </div>
+
+      <div class="section">
+        <h2>Data Collection</h2>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="collect-calendar" />
+            Collect calendar events
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="collect-travel" />
+            Collect travel information
+          </label>
+        </div>
+        <button id="save-preferences">Save Preferences</button>
+        <div id="preferences-status" class="status" style="display: none"></div>
+      </div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>
